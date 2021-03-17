@@ -130,10 +130,6 @@ img {
   margin-left: 50px;
 }
 
-.connection-list {
-  display: flex;
-  margin-left: auto;
-}
 
 .navigation-link {
   display: block;
@@ -147,6 +143,8 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .activ-nav-link::after {
@@ -174,8 +172,18 @@ img {
 
 /* connection */
 
+.connection-list {
+  display: flex;
+  margin-left: auto;
+}
+
 .connection-list .connection-item + .connection-item {
   margin-left: 50px;
+}
+
+.connection-list .connection-link {
+  display: flex;
+  align-items: center;
 }
 
 .connection-link {
@@ -186,6 +194,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-align: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connection-link:hover .header-icon,
@@ -200,12 +210,11 @@ img {
   margin-right: 10px;
   align-items: center;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.connection-list .connection-link {
-  display: flex;
-  align-items: center;
-}
+
 
 .outline {
   outline: 1px solid #ECECEC;
@@ -236,6 +245,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -275,6 +285,8 @@ img {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  /* transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .button:hover,
@@ -302,15 +314,16 @@ img {
 }
 
 .adv-icon {
-  width: 270px;
-  height: 120px;
-  background-color: var(--color-section);
-  border-radius: 4px;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+
   border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-section);
+  
+  margin-bottom: 30px;
 }
 
 .advantage-title {
@@ -362,7 +375,7 @@ img {
 font-size: 14px;
 line-height: 1.14;
 text-align: center;
-letter-spacing: 0.03em;}
+}
 
 .occupation-inscription {
   position: absolute;
@@ -442,21 +455,18 @@ letter-spacing: 0.03em;}
   justify-content: space-between;
 }
 
-.icons-list:not(:last-child) {
-  margin-right: 10px;
-}
-
 .team-thumb {
-  border-radius: 50%;
-  padding: 11px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-color);
 
+  border-radius: 50%;
   width: 44px;
   height: 44px;
-}
 
-.team-icon {
-  fill: var(--icons-color);
-}
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
 .link-icon-team:focus .team-thumb,
 .link-icon-team:hover .team-thumb,
@@ -489,21 +499,28 @@ letter-spacing: 0.03em;}
 }
 
 .clients-thumb {
-  width: 170px;
-  height: 90px;
-  border: 1px solid var(--icons-color);
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+  
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
-  fill: var(--icons-color);
+  fill: var(--icons-color); 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .clients-link:hover .client-logo {
   fill: var(--accent-color);
 }
+
 .clients-link:hover .clients-thumb {
   border: 1px solid var(--accent-color);
 }
@@ -537,6 +554,7 @@ letter-spacing: 0.03em;}
 .footer-link {
   display: inline-block;
   margin-bottom: var(--title-padding);
+  
 }
 
 .connection-footer {
@@ -544,6 +562,7 @@ letter-spacing: 0.03em;}
   line-height: 1.71;
   letter-spacing: inherit;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connection-footer:hover,
@@ -555,6 +574,7 @@ letter-spacing: 0.03em;}
   color: var(--background-color);
   font-size: 14px;
   line-height: 1.71;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .maps:hover,
@@ -597,6 +617,8 @@ letter-spacing: 0.03em;}
   border-radius: 50%;
   width: 44px;
   height: 44px;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:not(:last-child) {
@@ -650,6 +672,10 @@ letter-spacing: 0.03em;}
   border: rgba(255, 255, 255, 0.6);
 
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-choice:hover,
@@ -687,6 +713,8 @@ letter-spacing: 0.03em;}
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-content {
@@ -696,6 +724,7 @@ letter-spacing: 0.03em;}
 .menu-link:hover,
 .menu-link:focus {
   box-shadow: var(--portfolio-card-shadow);
+  
 }
 
 .menu-title {
